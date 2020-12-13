@@ -1,0 +1,8 @@
+<!--pages/gonglue/index.wxml-->
+<view class="page">
+  <view class="bar" wx:for="{{list}}" wx:for-index="idx" wx:for-item="itemName" wx:key="idx" data-url="{{itemName.path}}"
+    bindtap="onNavTap">
+    <view class="text">{{itemName.title}}</view>
+    <view class="des">{{itemName.desc}}</view>
+  </view>
+</view>

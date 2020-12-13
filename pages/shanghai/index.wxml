@@ -1,0 +1,234 @@
+<!-- pages/shanghai/index.wxml -->
+<view class="page">
+    <view class="hd">
+        <view class="bgL"></view>
+        <view class="bgHd">
+            <view class="bgT"></view>
+            <view class="title"></view>
+        </view>
+        <view class="bgR"></view>
+    </view>
+    <view class="bd">
+        <view class="hdL"></view>
+        <view class="hdBody">
+            <view class="sec">
+                <view class="vsm">怪物</view>
+                <view class="from">
+                    <view class="row">
+                        <view class="lf">物理攻击</view>
+                        <view class="rt">
+                            <input type="number" confirm-type="next" class="input" placeholder="0" maxlength="6"
+                                bindinput="onSetGWWLGJ" />
+                        </view>
+                    </view>
+                    <view class="row">
+                        <view class="lf">魔法攻击</view>
+                        <view class="rt">
+                            <input type="number" confirm-type="next" class="input" placeholder="0" maxlength="6"
+                                bindinput="onSetGWMFGJ" />
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="pk">Vs</view>
+            <view class="sec">
+                <view class="vsm">冒险者1</view>
+                <view class="from">
+                    <view class="row">
+                        <view class="lf">护甲</view>
+                        <view class="rt">
+                            <input type="number" confirm-type="next" class="input" placeholder="0" maxlength="5"
+                                bindinput="onSetMxz1HJ" />
+                        </view>
+                    </view>
+                    <view class="row">
+                        <view class="lf">抗性</view>
+                        <view class="rt">
+                            <input type="number" confirm-type="next" class="input" placeholder="0" maxlength="5"
+                                bindinput="onSetMxz1KX" />
+                        </view>
+                    </view>
+                    <view class="row">
+                        <view class="lf">生命</view>
+                        <view class="rt">
+                            <input type="number" confirm-type="next" class="input" placeholder="0" maxlength="5"
+                                bindinput="onSetMxz1SM" />
+                        </view>
+                    </view>
+                    <view class="row">
+                        <view class="lf">怪物物理伤害</view>
+                        <view class="rt">
+                            <input type="text" confirm-type="done" class="input" placeholder="{{resultWL1}}"
+                                disabled="{{true}}" />
+                        </view>
+                    </view>
+                    <view class="row">
+                        <view class="lf">怪物魔法伤害</view>
+                        <view class="rt">
+                            <input type="text" confirm-type="done" class="input" placeholder="{{resultMF1}}"
+                                disabled="{{true}}" />
+                        </view>
+                    </view>
+                    <view class="row">
+                        <view class="lf">战斗状态</view>
+                        <view class="rt">
+                            <input type="text" confirm-type="done" class="input" placeholder="{{resultMS1}}"
+                                disabled="{{true}}" />
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="btn" bindtap="onResultMxz1">计算</view>
+            <view class="sec">
+                <view class="vsm">冒险者2</view>
+                <view class="from">
+                    <view class="row">
+                        <view class="lf">护甲</view>
+                        <view class="rt">
+                            <input type="number" confirm-type="next" class="input" placeholder="0" maxlength="5"
+                                bindinput="onSetMxz2HJ" />
+                        </view>
+                    </view>
+                    <view class="row">
+                        <view class="lf">抗性</view>
+                        <view class="rt">
+                            <input type="number" confirm-type="next" class="input" placeholder="0" maxlength="5"
+                                bindinput="onSetMxz2KX" />
+                        </view>
+                    </view>
+                    <view class="row">
+                        <view class="lf">生命</view>
+                        <view class="rt">
+                            <input type="number" confirm-type="next" class="input" placeholder="0" maxlength="5"
+                                bindinput="onSetMxz2SM" />
+                        </view>
+                    </view>
+                    <view class="row">
+                        <view class="lf">怪物物理伤害</view>
+                        <view class="rt">
+                            <input type="text" confirm-type="done" class="input" placeholder="{{resultWL2}}"
+                                disabled="{{true}}" />
+                        </view>
+                    </view>
+                    <view class="row">
+                        <view class="lf">怪物魔法伤害</view>
+                        <view class="rt">
+                            <input type="text" confirm-type="done" class="input" placeholder="{{resultMF2}}"
+                                disabled="{{true}}" />
+                        </view>
+                    </view>
+                    <view class="row">
+                        <view class="lf">战斗状态</view>
+                        <view class="rt">
+                            <input type="text" confirm-type="done" class="input" placeholder="{{resultMS2}}"
+                                disabled="{{true}}" />
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="btn" bindtap="onResultMxz2">计算</view>
+            <view class="sec">
+                <view class="vsm">冒险者3</view>
+                <view class="from">
+                    <view class="row">
+                        <view class="lf">护甲</view>
+                        <view class="rt">
+                            <input type="number" confirm-type="next" class="input" placeholder="0" maxlength="5"
+                                bindinput="onSetMxz3HJ" />
+                        </view>
+                    </view>
+                    <view class="row">
+                        <view class="lf">抗性</view>
+                        <view class="rt">
+                            <input type="number" confirm-type="next" class="input" placeholder="0" maxlength="5"
+                                bindinput="onSetMxz3KX" />
+                        </view>
+                    </view>
+                    <view class="row">
+                        <view class="lf">生命</view>
+                        <view class="rt">
+                            <input type="number" confirm-type="next" class="input" placeholder="0" maxlength="5"
+                                bindinput="onSetMxz3SM" />
+                        </view>
+                    </view>
+                    <view class="row">
+                        <view class="lf">怪物物理伤害</view>
+                        <view class="rt">
+                            <input type="text" confirm-type="done" class="input" placeholder="{{resultWL3}}"
+                                disabled="{{true}}" />
+                        </view>
+                    </view>
+                    <view class="row">
+                        <view class="lf">怪物魔法伤害</view>
+                        <view class="rt">
+                            <input type="text" confirm-type="done" class="input" placeholder="{{resultMF3}}"
+                                disabled="{{true}}" />
+                        </view>
+                    </view>
+                    <view class="row">
+                        <view class="lf">战斗状态</view>
+                        <view class="rt">
+                            <input type="text" confirm-type="done" class="input" placeholder="{{resultMS3}}"
+                                disabled="{{true}}" />
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="btn" bindtap="onResultMxz3">计算</view>
+            <view class="sec">
+                <view class="vsm">冒险者4</view>
+                <view class="from">
+                    <view class="row">
+                        <view class="lf">护甲</view>
+                        <view class="rt">
+                            <input type="number" confirm-type="next" class="input" placeholder="0" maxlength="5"
+                                bindinput="onSetMxz4HJ" />
+                        </view>
+                    </view>
+                    <view class="row">
+                        <view class="lf">抗性</view>
+                        <view class="rt">
+                            <input type="number" confirm-type="next" class="input" placeholder="0" maxlength="5"
+                                bindinput="onSetMxz4KX" />
+                        </view>
+                    </view>
+                    <view class="row">
+                        <view class="lf">生命</view>
+                        <view class="rt">
+                            <input type="number" confirm-type="next" class="input" placeholder="0" maxlength="5"
+                                bindinput="onSetMxz4SM" />
+                        </view>
+                    </view>
+                    <view class="row">
+                        <view class="lf">怪物物理伤害</view>
+                        <view class="rt">
+                            <input type="text" confirm-type="done" class="input" placeholder="{{resultWL4}}"
+                                disabled="{{true}}" />
+                        </view>
+                    </view>
+                    <view class="row">
+                        <view class="lf">怪物魔法伤害</view>
+                        <view class="rt">
+                            <input type="text" confirm-type="done" class="input" placeholder="{{resultMF4}}"
+                                disabled="{{true}}" />
+                        </view>
+                    </view>
+                    <view class="row">
+                        <view class="lf">战斗状态</view>
+                        <view class="rt">
+                            <input type="text" confirm-type="done" class="input" placeholder="{{resultMS4}}"
+                                disabled="{{true}}" />
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="btn" bindtap="onResultMxz4">计算</view>
+        </view>
+        <view class="hdR"></view>
+    </view>
+    <view class="fd">
+        <view class="bgBl"></view>
+        <view class="bgB"></view>
+        <view class="bgBr"></view>
+    </view>
+</view>

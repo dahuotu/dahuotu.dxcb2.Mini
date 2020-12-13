@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/libao/index",
+    "pages/menu/index",
+    "pages/shanghai/index",
+    "pages/gonglue/index",
+    "pages/sstuijian/index",
+    "pages/ssceping/index",
+    "pages/wuzi/index",
+    "pages/guanyu/index",
+    "pages/test/index",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#12110f",
+    "navigationBarTitleText": "脸堡助手",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#557173",
+    "selectedColor": "#cab526",
+    "borderStyle": "black",
+    "backgroundColor": "#000",
+    "list": [
+      {
+        "pagePath": "pages/libao/index",
+        "text": "礼包领取",
+        "iconPath": "/static/images/jl.png",
+        "selectedIconPath": "/static/images/jl.png"
+      },
+      {
+        "pagePath": "pages/gonglue/index",
+        "text": "常用攻略",
+        "iconPath": "/static/images/gl.png",
+        "selectedIconPath": "/static/images/gl.png"
+      },
+      {
+        "pagePath": "pages/menu/index",
+        "text": "模拟计算",
+        "iconPath": "/static/images/zd.png",
+        "selectedIconPath": "/static/images/zd.png"
+      },
+      {
+        "pagePath": "pages/guanyu/index",
+        "text": "关于脸堡",
+        "iconPath": "/static/images/gy.png",
+        "selectedIconPath": "/static/images/gy.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

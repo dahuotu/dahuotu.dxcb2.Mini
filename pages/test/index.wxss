@@ -1,0 +1,4 @@
+/* pages/test/index.wxss */
+.ce {
+  text-align: center;
+}

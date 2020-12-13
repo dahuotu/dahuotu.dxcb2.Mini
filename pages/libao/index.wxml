@@ -1,0 +1,41 @@
+<!--pages/giftbag/index.wxml-->
+<view class="page">
+  <view class="hd">
+    <view class="bgL"></view>
+    <view class="bgHd">
+      <view class="bgT"></view>
+      <view class="title"></view>
+    </view>
+    <view class="bgR"></view>
+  </view>
+  <view class="bd">
+    <view class="hdL"></view>
+    <view class="hdBody">
+      <view class="sec" wx:for="{{list}}" wx:for-index="idx" wx:for-item="itemName"
+        wx:key="idx">
+        <view class="line">
+          <view class="l">
+            <view class="t">
+              {{itemName.name}}
+              <text class="yj" wx:if="{{itemName.state==2}}">永久</text>
+              <text class="zj" wx:elif="{{itemName.state==1}}">新的</text>
+              <text wx:else></text>
+            </view>
+            <view class="p">{{itemName.remark?itemName.remark:''}}</view>
+          </view>
+          <view class="r">
+            <view wx:if="{{itemName.state!=0}}" class="ok" bindtap="onCopy" data-id="{{itemName.id}}"
+              data-code="{{itemName.name}}">领取</view>
+            <view class="unok" wx:else="">已过期</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="hdR"></view>
+  </view>
+  <view class="fd">
+    <view class="bgBl"></view>
+    <view class="bgB"></view>
+    <view class="bgBr"></view>
+  </view>
+</view>

@@ -1,0 +1,69 @@
+<!-- pages/wuzi/index.wxml -->
+<view class="page">
+  <view class="hd">
+    <view class="bgL"></view>
+    <view class="bgHd">
+      <view class="bgT"></view>
+      <view class="title"></view>
+    </view>
+    <view class="bgR"></view>
+  </view>
+  <view class="bd">
+    <view class="hdL"></view>
+    <view class="hdBody">
+      <view class="sec">
+        <view class="from">
+          <view class="row">
+            <view class="lf">资源储量</view>
+            <view class="rt">
+              <input type="number" confirm-type="next" class="input" placeholder-class="inputpr" placeholder="0"
+                maxlength="7" bindinput="onSetMax" />
+            </view>
+          </view>
+          <view class="row">
+            <view class="lf">现有储量</view>
+            <view class="rt">
+              <input type="number" confirm-type="next" class="input" placeholder-class="inputpr" placeholder="0"
+                maxlength="7" bindinput="onSetHas" />
+            </view>
+          </view>
+          <view class="row">
+            <view class="lf">产量</view>
+            <view class="rt">
+              <input type="number" confirm-type="next" class="input" placeholder-class="inputpr" placeholder="0"
+                maxlength="3" bindinput="onSetCre" />
+            </view>
+          </view>
+          <view class="row">
+            <view class="lf">流水线时间</view>
+            <view class="rt">
+              <input type="number" confirm-type="next" class="input" placeholder-class="inputpr" placeholder="0"
+                maxlength="2" bindinput="onSetTim" />
+            </view>
+          </view>
+          <view class="row">
+            <view class="lf">满仓所需时间</view>
+            <view class="rt">
+              <input type="text" confirm-type="done" class="input" placeholder-class="inputpr"
+                placeholder="{{resultTime}}" disabled="{{true}}" />
+            </view>
+          </view>
+          <view class="row">
+            <view class="lf">满仓预计时间</view>
+            <view class="rt">
+              <input type="text" confirm-type="done" class="input" placeholder-class="inputpr"
+                placeholder="{{resultDate}}" disabled="{{true}}" />
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="btn" bindtap="onSumResult">计算</view>
+    </view>
+    <view class="hdR"></view>
+  </view>
+  <view class="fd">
+    <view class="bgBl"></view>
+    <view class="bgB"></view>
+    <view class="bgBr"></view>
+  </view>
+</view>

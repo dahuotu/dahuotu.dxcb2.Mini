@@ -1,0 +1,96 @@
+<!--pages/sstuijian/index.wxml-->
+<!--index.wxml-->
+<!--pages/menu/index.wxml-->
+<view class="page">
+  <view class="hd">
+    <view class="bgL"></view>
+    <view class="bgHd">
+      <view class="bgT"></view>
+      <view class="title"></view>
+    </view>
+    <view class="bgR"></view>
+  </view>
+  <view class="bd">
+    <view class="hdL"></view>
+    <view class="hdBody">
+      <view class="sec">
+        <view class="from">
+          <view class="face">
+            <view class="pic">
+              <image src="data:image/png;base64,{{selectPic}}" mode="scaleToFill"></image>
+            </view>
+          </view>
+          <view wx:if="{{selectKey==null}}" class="msg">选择SS级冒险者</view>
+          <view wx:else="" class="msg">{{selectRows.name}}/{{selectRows.job}}</view>
+          <view class="btn" bindtap="onSelectPlayer">选择</view>
+        </view>
+      </view>
+      <view class="sec" wx:if="{{selectRows!=null}}">
+        <view class="vsm">{{selectRows.name}}测评</view>
+        <view class="from">
+          <view class="row">
+            <view class="lf">最终职业</view>
+            <view class="rt">
+              <picker class="picker" bindchange="onPickerChange" value="{{objectIndex}}" range="{{selectJobRows}}"
+                range-key="name">
+                {{selectJobVal}}
+              </picker>
+            </view>
+          </view>
+          <view class="row" wx:if="{{jobRow!=null}}">
+            <view class="lf">测评阶段</view>
+            <view class="rt">
+              <picker class="picker" bindchange="onPickerJdChange" value="{{objectIndex}}" range="{{selectJdRows}}"
+                range-key="name">
+                {{selectJdVal}}
+              </picker>
+            </view>
+          </view>
+          <view wx:if="{{isSinge==true}}">
+            <view class="row" wx:if="{{selectJdId!=0}}">
+              <view class="lf">{{descMainName}}</view>
+              <view class="rt">
+                <input type="number" confirm-type="next" class="input" placeholder-class="inputpr" placeholder="0"
+                  maxlength="5" bindinput="onSetMain" />
+              </view>
+            </view>
+          </view>
+          <view wx:else="">
+            <view class="row" wx:if="{{selectJdId!=0}}">
+              <view class="lf">{{descMainName}}</view>
+              <view class="rt">
+                <input type="number" confirm-type="next" class="input" placeholder-class="inputpr" placeholder="0"
+                  maxlength="5" bindinput="onSetMain" />
+              </view>
+            </view>
+            <view class="row" wx:if="{{selectJdId!=0}}">
+              <view class="lf">{{descFuName}}</view>
+              <view class="rt">
+                <input type="number" confirm-type="next" class="input" placeholder-class="inputpr" placeholder="0"
+                  maxlength="5" bindinput="onSetFu" />
+              </view>
+            </view>
+          </view>
+          <view class="resultMsg" wx:if="{{resultMsg!=''}}">测评结果：{{resultMsg}}</view>
+        </view>
+        <view class="btn" bindtap="onTestResult" wx:if="{{selectJdId!=0}}">测评</view>
+      </view>
+    </view>
+    <view class="hdR"></view>
+  </view>
+  <view class="fd">
+    <view class="bgBl"></view>
+    <view class="bgB"></view>
+    <view class="bgBr"></view>
+  </view>
+</view>
+<view class="dialog" wx:if="{{dialogFlag==true}}">
+  <view class="win">
+    <view class="ul">
+      <view class="li" wx:for="{{list}}" wx:for-index="idx" wx:for-item="itemName" wx:key="idx" bindtap="onSelectClose"
+        data-key="{{idx}}" data-face="{{itemName.face}}" data-job="{{itemName.job}}">
+        <image src="data:image/jepg;base64,{{itemName.face}}"></image>
+      </view>
+    </view>
+  </view>
+</view>

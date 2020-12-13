@@ -1,0 +1,152 @@
+<!--pages/sstuijian/index.wxml-->
+<!--index.wxml-->
+<!--pages/menu/index.wxml-->
+<view class="page">
+  <view class="hd">
+    <view class="bgL"></view>
+    <view class="bgHd">
+      <view class="bgT"></view>
+      <view class="title"></view>
+    </view>
+    <view class="bgR"></view>
+  </view>
+  <view class="bd">
+    <view class="hdL"></view>
+    <view class="hdBody">
+      <view class="sec">
+        <view class="from">
+          <view class="face">
+            <view class="pic">
+              <image src="data:image/png;base64,{{selectPic}}" mode="scaleToFill"></image>
+            </view>
+          </view>
+          <view wx:if="{{selectKey==null}}" class="msg">选择SS级冒险者</view>
+          <view wx:else="" class="msg">{{selectRows.name}}/{{selectRows.job}}</view>
+          <view class="btn" bindtap="onSelectPlayer">选择</view>
+        </view>
+      </view>
+      <view class="sec" wx:if="{{selectRows!=null}}">
+        <view class="vsm">{{selectRows.name}}转职推荐</view>
+        <view class="from">
+          <view class="rowt">
+            <view class="lf">职业</view>
+            <view class="rt">
+              <view class="note">{{selectRows.job}}</view>
+            </view>
+          </view>
+          <view class="rdnum" wx:if="{{selectRows.job1!=null}}">1</view>
+          <view class="rowt" wx:if="{{selectRows.job1!=null}}">
+            <view class="lf">第1职业</view>
+            <view class="rt">
+              <view class="note">{{selectRows.job1}}</view>
+            </view>
+          </view>
+          <view class="rowt" wx:if="{{selectRows.job1xl!=null}}">
+            <view class="lf">转职线路</view>
+            <view class="rt">
+              <view class="note">{{selectRows.job1xl}}</view>
+            </view>
+          </view>
+          <view class="rowt" wx:if="{{selectRows.job1cl!=null}}">
+            <view class="lf">所需材料</view>
+            <view class="rt">
+              <view class="note">{{selectRows.job1cl}}</view>
+            </view>
+          </view>
+          <view class="rdnum" wx:if="{{selectRows.job2!=null}}">2</view>
+          <view class="rowt" wx:if="{{selectRows.job2!=null}}">
+            <view class="lf">第2职业</view>
+            <view class="rt">
+              <view class="note">{{selectRows.job2}}</view>
+            </view>
+          </view>
+          <view class="rowt" wx:if="{{selectRows.job2xl!=null}}">
+            <view class="lf">转职线路</view>
+            <view class="rt">
+              <view class="note">{{selectRows.job2xl}}</view>
+            </view>
+          </view>
+          <view class="rowt" wx:if="{{selectRows.job2cl!=null}}">
+            <view class="lf">所需材料</view>
+            <view class="rt">
+              <view class="note">{{selectRows.job2cl}}</view>
+            </view>
+          </view>
+          <view class="rdnum" wx:if="{{selectRows.job3!=null}}">3</view>
+          <view class="rowt" wx:if="{{selectRows.job3!=null}}">
+            <view class="lf">第3职业</view>
+            <view class="rt">
+              <view class="note">{{selectRows.job3}}</view>
+            </view>
+          </view>
+          <view class="rowt" wx:if="{{selectRows.job3xl!=null}}">
+            <view class="lf">转职线路</view>
+            <view class="rt">
+              <view class="note">{{selectRows.job3xl}}</view>
+            </view>
+          </view>
+          <view class="rowt" wx:if="{{selectRows.job3cl!=null}}">
+            <view class="lf">所需材料</view>
+            <view class="rt">
+              <view class="note">{{selectRows.job3cl}}</view>
+            </view>
+          </view>
+          <view class="rdnum" wx:if="{{selectRows.job4!=null}}">4</view>
+          <view class="rowt" wx:if="{{selectRows.job4!=null}}">
+            <view class="lf">第4职业</view>
+            <view class="rt">
+              <view class="note">{{selectRows.job4}}</view>
+            </view>
+          </view>
+          <view class="rowt" wx:if="{{selectRows.job4xl!=null}}">
+            <view class="lf">转职线路</view>
+            <view class="rt">
+              <view class="note">{{selectRows.job4xl}}</view>
+            </view>
+          </view>
+          <view class="rowt" wx:if="{{selectRows.job4cl!=null}}">
+            <view class="lf">所需材料</view>
+            <view class="rt">
+              <view class="note">{{selectRows.job4cl}}</view>
+            </view>
+          </view>
+          <view class="rdnum" wx:if="{{selectRows.job5!=null}}">5</view>
+          <view class="rowt" wx:if="{{selectRows.job5!=null}}">
+            <view class="lf">第5职业</view>
+            <view class="rt">
+              <view class="note">{{selectRows.job5}}</view>
+            </view>
+          </view>
+          <view class="rowt" wx:if="{{selectRows.job5xl!=null}}">
+            <view class="lf">转职线路</view>
+            <view class="rt">
+              <view class="note">{{selectRows.job5xl}}</view>
+            </view>
+          </view>
+          <view class="rowt" wx:if="{{selectRows.job5cl!=null}}">
+            <view class="lf">所需材料</view>
+            <view class="rt">
+              <view class="note">{{selectRows.job5cl}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="hdR"></view>
+  </view>
+  <view class="fd">
+    <view class="bgBl"></view>
+    <view class="bgB"></view>
+    <view class="bgBr"></view>
+  </view>
+</view>
+<view class="dialog" wx:if="{{dialogFlag==true}}">
+  <view class="win">
+    <view class="ul">
+      <view class="li" wx:for="{{list}}" wx:for-index="idx" wx:for-item="itemName" wx:key="idx" bindtap="onSelectClose"
+        data-key="{{idx}}" data-face="{{itemName.face}}">
+        <image src="data:image/jepg;base64,{{itemName.face}}"></image>
+      </view>
+    </view>
+  </view>
+</view>

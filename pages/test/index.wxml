@@ -1,0 +1,25 @@
+<!--pages/test/index.wxml-->
+<!--index.wxml-->
+<!--pages/menu/index.wxml-->
+<view class="page">
+  <view class="hd">
+    <view class="bgL"></view>
+    <view class="bgHd">
+      <view class="bgT"></view>
+      <view class="title"></view>
+    </view>
+    <view class="bgR"></view>
+  </view>
+  <view class="bd">
+    <view class="hdL"></view>
+    <view class="hdBody">
+      <view class="test">抱歉，功能稍后开放...</view>
+    </view>
+    <view class="hdR"></view>
+  </view>
+  <view class="fd">
+    <view class="bgBl"></view>
+    <view class="bgB"></view>
+    <view class="bgBr"></view>
+  </view>
+</view>

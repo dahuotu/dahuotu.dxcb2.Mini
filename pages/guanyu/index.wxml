@@ -1,0 +1,34 @@
+<!--pages/guanyu/index.wxml-->
+<view class="page">
+  <view class="hd">
+    <view class="bgL"></view>
+    <view class="bgHd">
+      <view class="bgT"></view>
+      <view class="title"></view>
+    </view>
+    <view class="bgR"></view>
+  </view>
+  <view class="bd">
+    <view class="hdL"></view>
+    <view class="hdBody">
+      <view class="sec" wx:for="{{list}}" wx:for-index="idx" wx:for-item="itemName" wx:key="idx">
+        <view class="tips">{{itemName.title}}</view>
+        <view class="content">
+          {{itemName.content}}
+        </view>
+        <view wx:if="{{itemName.opt=='add'}}" class="btn" data-id="{{itemName.dataid}}" data-opt="{{itemName.opt}}"
+          bindtap="onNavTap">加入教会
+        </view>
+        <view wx:if="{{itemName.opt=='link'}}" class="btn" data-id="{{itemName.dataid}}" data-opt="{{itemName.opt}}"
+          bindtap="onNavTap">联系我
+        </view>
+      </view>
+    </view>
+    <view class="hdR"></view>
+  </view>
+  <view class="fd">
+    <view class="bgBl"></view>
+    <view class="bgB"></view>
+    <view class="bgBr"></view>
+  </view>
+</view>
