@@ -51,7 +51,7 @@
               <view class="lf">{{descMainName}}</view>
               <view class="rt">
                 <input type="number" confirm-type="next" class="input" placeholder-class="inputpr" placeholder="0"
-                  maxlength="5" bindinput="onSetMain" />
+                  maxlength="3" bindinput="onSetMain" />
               </view>
             </view>
           </view>
@@ -60,14 +60,14 @@
               <view class="lf">{{descMainName}}</view>
               <view class="rt">
                 <input type="number" confirm-type="next" class="input" placeholder-class="inputpr" placeholder="0"
-                  maxlength="5" bindinput="onSetMain" />
+                  maxlength="3" bindinput="onSetMain" />
               </view>
             </view>
             <view class="row" wx:if="{{selectJdId!=0}}">
               <view class="lf">{{descFuName}}</view>
               <view class="rt">
                 <input type="number" confirm-type="next" class="input" placeholder-class="inputpr" placeholder="0"
-                  maxlength="5" bindinput="onSetFu" />
+                  maxlength="3" bindinput="onSetFu" />
               </view>
             </view>
           </view>

@@ -7,11 +7,11 @@ Page({
   data: {
     list: [{
       "title": "SS级冒险者转职推荐",
-      "desc": "选择SS级冒险者即可知道该SS级冒险者适合转哪类职业",
+      "desc": "选择SS级冒险者即可知道该SS级冒险者适合转哪类职业，参照最新SS级职业属性表",
       "path": "/pages/sstuijian/index"
     }, {
       "title": "SS级冒险者测评",
-      "desc": "选择SS级冒险者输入指定属性即可测评出冒险者等阶",
+      "desc": "选择SS级冒险者输入指定属性即可测评出冒险者等阶，参照最新SS级职业属性表",
       "path": "/pages/ssceping/index"
     }]
   },

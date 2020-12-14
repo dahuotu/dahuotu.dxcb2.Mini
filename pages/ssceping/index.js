@@ -780,16 +780,38 @@ Page({
   //主属性
   onSetMain: function (e) {
     let num = e.detail.value;
-    this.setData({
-      tmpMain: num
-    });
+    if(/^\+?[1-9][0-9]*$/.test(num)==true){
+      this.setData({
+        tmpMain: num
+      });
+    }else{
+      this.setData({
+        tmpMain: 0
+      });
+      wx.showToast({
+        title: '请填写正确的数值',
+        icon: 'none',
+        duration: 2000
+      });
+    }
   },
   //副属性
   onSetFu: function (e) {
     let num = e.detail.value;
-    this.setData({
-      tmpFu: num
-    });
+    if(/^\+?[1-9][0-9]*$/.test(num)==true){
+      this.setData({
+        tmpFu: num
+      });
+    }else{
+      this.setData({
+        tmpFu: 0
+      });
+      wx.showToast({
+        title: '请填写正确的数值',
+        icon: 'none',
+        duration: 2000
+      });
+    }
   },
   onTestResult: function (e) {
     let that = this;
@@ -810,7 +832,7 @@ Page({
         });
         return;
       }
-      that.testResultMore(that.data.tmpMain, that.data.tmpFu)
+      that.testResultMore(parseInt(that.data.tmpMain), parseInt(that.data.tmpFu))
     } else {
       if (that.data.tmpMain == 0) {
         wx.showToast({
@@ -821,7 +843,7 @@ Page({
         return;
       }
       //单个属性
-      that.testResult(that.data.tmpMain);
+      that.testResult(parseInt(that.data.tmpMain));
     }
   },
   //检测属性类型true,单属性，false,多属性
@@ -839,29 +861,29 @@ Page({
     if (that.data.selectJdId == 60) {
       if (e >= that.data.jobRow.lv60JP) {
         that.setData({
-          resultMsg: '极品，可升，晋升月阶100级后，50%的几率为普通冒险者，20%的几率为极品冒险者，30%的几率可能为渣渣冒险者，建议进阶月阶'
+          resultMsg: '5星60级 极品（' + that.data.descMainName + '刚好或超过' + that.data.jobRow.lv60JP + '为极品），可升，晋升月阶100级后，50%的几率为普通冒险者，20%的几率为极品冒险者，30%的几率可能为渣渣冒险者，建议进阶月阶'
         });
       } else if (e < that.data.jobRow.lv60JP && e > that.data.jobRow.lv60) {
         that.setData({
-          resultMsg: '普通，可升，晋升月阶100级后，50%的几率为渣渣冒险者，20%的几率为极品冒险者，30%的几率可能为普通冒险者，建议进阶月阶'
+          resultMsg: '5星60级 普通(' + that.data.descMainName + '超过' + that.data.jobRow.lv60 + '不足' + that.data.jobRow.lv60JP + '为普通)，可升，晋升月阶100级后，50%的几率为渣渣冒险者，20%的几率为极品冒险者，30%的几率可能为普通冒险者，建议进阶月阶'
         });
       } else {
         that.setData({
-          resultMsg: '渣渣，不可升，属性未达到普通标准，若晋升月阶100级，5%的几率为极品冒险者，10%的几率为普通冒险者'
+          resultMsg: '5星60级 渣渣，不可升；' + that.data.descMainName + '未超过' + that.data.jobRow.lv60 + '，若晋升月阶100级，5%的几率为极品冒险者，10%的几率为普通冒险者'
         });
       }
     } else {
       if (e >= that.data.jobRow.lv100JP) {
         that.setData({
-          resultMsg: '极品，可用'
+          resultMsg: '月阶100级 极品，可用；' + that.data.descMainName + '刚好或超过' + that.data.jobRow.lv100JP + '为极品'
         });
       } else if (e < that.data.jobRow.lv100JP && e > that.data.jobRow.lv100) {
         that.setData({
-          resultMsg: '普通，可用'
+          resultMsg: '月阶100级 普通，可用；' + that.data.descMainName + '超过' + that.data.jobRow.lv100 + '不足' + that.data.jobRow.lv100JP + '为普通。'
         });
       } else {
         that.setData({
-          resultMsg: '渣渣，不可用'
+          resultMsg: '月阶100级 渣渣，不可用；' + that.data.descMainName + '未超过' + that.data.jobRow.lv100 + '。'
         });
       }
     }

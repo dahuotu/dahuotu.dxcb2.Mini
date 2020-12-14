@@ -36,9 +36,10 @@
           </view>
           <view class="rdnum" wx:if="{{selectRows.job1!=null}}">1</view>
           <view class="rowt" wx:if="{{selectRows.job1!=null}}">
-            <view class="lf">第1职业</view>
+            <view class="lf">推荐职业1</view>
             <view class="rt">
-              <view class="note">{{selectRows.job1}}</view>
+              <view class="note" wx:if="{{selectRows.job1=='均可'}}">{{selectRows.job1}}(就是{{selectRows.job}}任意一种职业，优先选你没有的)</view>
+              <view class="note" wx:else>{{selectRows.job1}}</view>
             </view>
           </view>
           <view class="rowt" wx:if="{{selectRows.job1xl!=null}}">
@@ -55,9 +56,10 @@
           </view>
           <view class="rdnum" wx:if="{{selectRows.job2!=null}}">2</view>
           <view class="rowt" wx:if="{{selectRows.job2!=null}}">
-            <view class="lf">第2职业</view>
+            <view class="lf">推荐职业2</view>
             <view class="rt">
-              <view class="note">{{selectRows.job2}}</view>
+              <view class="note" wx:if="{{selectRows.job2=='解雇换SS券'}}">{{selectRows.job2}}(就是出极品的概率很低，没有就留着，有就直接换SS指定招募券)</view>
+              <view class="note" wx:else>{{selectRows.job2}}</view>
             </view>
           </view>
           <view class="rowt" wx:if="{{selectRows.job2xl!=null}}">
@@ -74,7 +76,7 @@
           </view>
           <view class="rdnum" wx:if="{{selectRows.job3!=null}}">3</view>
           <view class="rowt" wx:if="{{selectRows.job3!=null}}">
-            <view class="lf">第3职业</view>
+            <view class="lf">推荐职业3</view>
             <view class="rt">
               <view class="note">{{selectRows.job3}}</view>
             </view>
@@ -93,7 +95,7 @@
           </view>
           <view class="rdnum" wx:if="{{selectRows.job4!=null}}">4</view>
           <view class="rowt" wx:if="{{selectRows.job4!=null}}">
-            <view class="lf">第4职业</view>
+            <view class="lf">推荐职业4</view>
             <view class="rt">
               <view class="note">{{selectRows.job4}}</view>
             </view>
@@ -112,7 +114,7 @@
           </view>
           <view class="rdnum" wx:if="{{selectRows.job5!=null}}">5</view>
           <view class="rowt" wx:if="{{selectRows.job5!=null}}">
-            <view class="lf">第5职业</view>
+            <view class="lf">推荐职业5</view>
             <view class="rt">
               <view class="note">{{selectRows.job5}}</view>
             </view>
