@@ -1,0 +1,70 @@
+<!-- pages/naiya/index.wxml -->
+<view class="page">
+    <view class="hd">
+        <view class="bgL"></view>
+        <view class="bgHd">
+            <view class="bgT"></view>
+            <view class="title"></view>
+        </view>
+        <view class="bgR"></view>
+    </view>
+    <view class="bd">
+        <view class="hdL"></view>
+        <view class="hdBody">
+            <view class="sec">
+                <view class="from">
+                    <view class="alert">高技巧猎人可以在独裁提供技巧时施加灼烧更好用</view>
+                    <view class="row">
+                        <view class="lf">独裁技巧</view>
+                        <view class="rt">
+                            <input type="number" confirm-type="next" class="input" placeholder="0" maxlength="4" bindinput="onSetLqjq" />
+                        </view>
+                    </view>
+                    <view class="row">
+                        <view class="lf">法师技巧</view>
+                        <view class="rt">
+                            <input type="number" confirm-type="next" class="input" placeholder="0" maxlength="4" bindinput="onSetFsjq" />
+                        </view>
+                    </view>
+                    <view class="row">
+                        <view class="lf">是否为传奇法师</view>
+                        <view class="rt">
+                            <switch class="checkbox" checked="{{switchChecked}}" value="{{Iscq}}" bindchange="onSetIscq" />
+                        </view>
+                    </view>
+                    <view class="row">
+                        <view class="lf">祭祀技巧</view>
+                        <view class="rt">
+                            <input type="number" confirm-type="next" class="input" placeholder="0" maxlength="4" bindinput="onSetJsjq" />
+                        </view>
+                    </view>
+                    <view class="row">
+                        <view class="lf">复仇%</view>
+                        <view class="rt">
+                            <input type="number" confirm-type="next" class="input" placeholder="0" maxlength="3" bindinput="onSetFcb" />
+                        </view>
+                    </view>
+                    <view class="row">
+                        <view class="lf">状态效果%</view>
+                        <view class="rt">
+                            <input type="number" confirm-type="next" class="input" placeholder="0" maxlength="3" bindinput="onSetZtb" />
+                        </view>
+                    </view>
+                    <view class="row" wx:if="{{resultNum>0}}">
+                        <view class="lf">最终buff抗性</view>
+                        <view class="rt">
+                            <input type="text" confirm-type="done" class="input" placeholder="{{resultNum}}" disabled="{{true}}" />
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="btn" bindtap="onResult">计算</view>
+        </view>
+        <view class="hdR"></view>
+    </view>
+    <view class="fd">
+        <view class="bgBl"></view>
+        <view class="bgB"></view>
+        <view class="bgBr"></view>
+    </view>
+</view>

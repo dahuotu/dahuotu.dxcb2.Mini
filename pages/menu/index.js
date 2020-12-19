@@ -10,6 +10,10 @@ Page({
       "desc": "出征打BOSS时提前通过怪物伤害计算模拟BOSS实际输出",
       "path": "/pages/shanghai/index"
     }, {
+      "title": "旧神奈亚抗性计算",
+      "desc": "用于计算遗迹9打旧神·奈亚时模拟计算抗性——来自玩家：安兹'乌尔'恭",
+      "path": "/pages/naiya/index"
+    }, {
       "title": "资源满仓计算",
       "desc": "在咸鱼时计算庇护所资源满仓时间好提前设置好闹钟以免爆仓",
       "path": "/pages/wuzi/index"

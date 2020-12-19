@@ -41,14 +41,14 @@
                 maxlength="2" bindinput="onSetTim" />
             </view>
           </view>
-          <view class="row">
+          <view class="row" wx:if="{{resultTime!='-'}}">
             <view class="lf">满仓所需时间</view>
             <view class="rt">
               <input type="text" confirm-type="done" class="input" placeholder-class="inputpr"
                 placeholder="{{resultTime}}" disabled="{{true}}" />
             </view>
           </view>
-          <view class="row">
+          <view class="row" wx:if="{{resultDate!='-'}}">
             <view class="lf">满仓预计时间</view>
             <view class="rt">
               <input type="text" confirm-type="done" class="input" placeholder-class="inputpr"

@@ -304,6 +304,18 @@ page {
   text-align: center;
 }
 
+.page .from .alert {
+  color: #ad835a;
+  font-size: 28rpx;
+  width: auto;
+  height: auto;
+  text-align: left;
+  padding: 15rpx;
+  background: #000;
+  margin: 0 auto;
+  margin-bottom: 20rpx;
+}
+
 .page .line {
   width: 100%;
   display: flex;
@@ -397,6 +409,12 @@ page {
   line-height: 46rpx;
   padding-left: 15rpx;
 }
+.page .checkbox{
+  transform: scale(0.7);
+  width: 100%;
+  margin-left: -30%;
+}
+
 .page .inputpr {
   color: #7b6d55;
 }
